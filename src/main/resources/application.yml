@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: undertow-reverse-proxy
+server:
+  port: 8080
+  undertow:
+    accesslog:
+      dir: target/logs
+      pattern: combined
+      enabled: true
+  compression:
+    enabled: true
+    min-response-size: 1
+    
+servicelocator:
+  wso2demo1:
+    url: http://localhost:9000
+    
